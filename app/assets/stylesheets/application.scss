@@ -1,0 +1,391 @@
+@import 'normalize';
+@import 'user';
+@import 'dashboards';
+// ______________________________________________
+// Variables
+// ______________________________________________
+
+$btn-off-white: white;
+$btn-off-blue: #00BD9C;
+$main_color: #00BD9C;
+$btn-border: 2px solid white;
+$btn-height: 20px;
+$btn-padding: 1rem;
+$form-color: #00BD9C;
+$submit-button: #FF6666;
+$gray: gray;
+$links: #F63f2b;
+$teal: #00be9c;
+$pink: #b90052;
+$pom: #F63f2b;
+// ______________________________________________
+// Button styling
+// ______________________________________________
+
+//
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Architects Daughter', sans-serif;
+}
+//
+// p {
+//   font-family: 'Cabin', sans-serif;
+// }
+
+tr {
+  height:2em;
+}
+
+a {
+  text-decoration: none;
+  color:$pom;
+  font-size: 1.2em;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+
+li {
+  list-style-type: none;
+
+}
+
+.log_in_links {
+  padding-top: 10px;
+  font-family: 'Cabin', sans-serif;
+  font-size: 0.8em;
+}
+
+.back_link_nd {
+  padding-top: 10px;
+  font-family: 'Cabin', sans-serif;
+  font-size: 0.8em;
+}
+
+h2 > a {
+  font-size: 1em;
+  color: white;
+  font-size: 1em;
+  &:hover{
+    color:#00BD9C;
+  }
+}
+
+
+.btn {
+
+  font-size: 1rem;
+  line-height: $btn-height;
+  margin: 0.5rem;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.btn-off-white {
+  background: $btn-off-white;
+  color:$btn-off-blue;
+  font-weight: bold;
+  &:hover {
+    background: $btn-off-blue;
+  }
+}
+
+.btn-off-blue {
+  background: $btn-off-blue;
+  color: white;
+  font-weight: bold;
+   &:hover {
+    background: darken($btn-off-blue, 20%);
+  }
+}
+
+.btn-off-blue {
+  background: $btn-off-blue;
+  color: white;
+  font-weight: bold;
+   &:hover {
+    background: darken($btn-off-blue, 20%);
+  }
+}
+
+
+
+// gray box around forms
+.user_form {
+  background-color: white;
+  border: 2px solid $main_color;
+  padding:3em;
+  max-width: 35em;
+  margin:auto;
+  margin-top: 3em;
+  border-radius: 15px;
+  -webkit-box-shadow: 13px 13px 20px -9px rgba(0,0,0,1);
+  -moz-box-shadow: 13px 13px 20px -9px rgba(0,0,0,1);
+  box-shadow: 13px 13px 20px -9px rgba(0,0,0,1);
+}
+
+
+.user_form_wide {
+  border: 2px solid $form-color;
+  padding:3em;
+  max-width: 50em;
+  margin-top: 3em;
+  margin:auto;
+  border-radius: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 13px 13px 20px -9px rgba(0,0,0,1);
+  -moz-box-shadow: 13px 13px 20px -9px rgba(0,0,0,1);
+  box-shadow: 13px 13px 20px -9px rgba(0,0,0,1);
+}
+
+.form_top {
+  border: 2px solid $form-color;
+  padding:1em;
+  max-width: 50em;
+  margin-top: 8em;
+  margin:auto;
+  border-radius: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 13px 13px 20px -9px rgba(0,0,0,1);
+  -moz-box-shadow: 13px 13px 20px -9px rgba(0,0,0,1);
+  box-shadow: 13px 13px 20px -9px rgba(0,0,0,1);
+}
+
+
+
+.show_form {
+  font-size: 1em;
+  background-color: white;
+  border: 2px solid $main_color;
+  width: 60em;
+  padding:3em;
+  margin:auto;
+  margin-top: 2em;
+  border-radius: 15px;
+  -webkit-box-shadow: 13px 13px 20px -9px rgba(0,0,0,1);
+  -moz-box-shadow: 13px 13px 20px -9px rgba(0,0,0,1);
+  box-shadow: 13px 13px 20px -9px rgba(0,0,0,1);
+}
+
+.devise_flexbox_container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_flexbox_container{
+  padding-top: 3em;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text_area_field {
+  min-width: 40em;
+  min-height: 10em;
+  border-radius: 5px;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.75);
+}
+
+
+// blank white spaces in form for typing in submission text
+input[type="email"],[type="password"],[type="name"],
+[type="text"]{
+  padding: 5px;
+  font-family: 'Cabin', sans-serif;
+  min-height: 2em;
+  border-radius: 5px;
+  min-width:25em;
+  -webkit-box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.75);
+}
+// Form submission buttons
+input[type="submit"],[type="file"]{
+background:#94b1c4;
+font-family: 'Cabin', sans-serif;
+padding: 5px;
+margin-top: 10px;
+min-height: 2em;
+border-radius: 5px;
+max-width:15em;
+-webkit-box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.75);
+box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.75);
+}
+
+input[type="checkbox"]{
+  min-height: 1em;
+  min-width: 1em;
+  margin:8px;
+}
+
+// NAVBAR
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+#cssmenu {
+  background: #00BD9C;
+  width: auto;
+}
+#cssmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  display: block;
+  zoom: 1;
+}
+#cssmenu ul:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+#cssmenu ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+#cssmenu.align-right ul li {
+  float: right;
+}
+#cssmenu.align-center ul {
+  text-align: center;
+}
+#cssmenu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 2em;
+  font-family: 'Architects Daughter',sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  position: relative;
+  -webkit-transition: color .25s;
+  -moz-transition: color .25s;
+  -ms-transition: color .25s;
+  -o-transition: color .25s;
+  transition: color .25s;
+}
+#cssmenu ul li a:hover {
+  color: #333333;
+}
+#cssmenu ul li a:hover:before {
+  width: 100%;
+}
+#cssmenu ul li a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -3px;
+  top: 19px;
+  height: 6px;
+  width: 6px;
+  background: #ffffff;
+  opacity: .5;
+}
+#cssmenu ul li a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: #333333;
+  -webkit-transition: width .25s;
+  -moz-transition: width .25s;
+  -ms-transition: width .25s;
+  -o-transition: width .25s;
+  transition: width .25s;
+}
+#cssmenu ul li.last > a:after,
+#cssmenu ul li:last-child > a:after {
+  display: none;
+}
+#cssmenu ul li.active a {
+  color: #333333;
+}
+#cssmenu ul li.active a:before {
+  width: 100%;
+}
+#cssmenu.align-right li.last > a:after,
+#cssmenu.align-right li:last-child > a:after {
+  display: block;
+}
+#cssmenu.align-right li:first-child a:after {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  #cssmenu ul li {
+    float: none;
+    display: block;
+  }
+  #cssmenu ul li a {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #fb998c;
+  }
+  #cssmenu ul li.last > a,
+  #cssmenu ul li:last-child > a {
+    border: 0;
+  }
+  #cssmenu ul li a:after {
+    display: none;
+  }
+  #cssmenu ul li a:before {
+    display: none;
+  }
+}
+
+.index_center {
+  font-family: 'Cabin', sans-serif;
+}
+
+
+.calendar_month {
+  font-family: 'Cabin', white;
+  color:white;
+}
+
+
+
+.well.controls {
+padding:1em;
+}
+
+.inline_calendar {
+  display: flex;
+}
+
+.cal_title {
+align-items: center;
+margin: auto;
+}
+
+#dashboard_bottom_row{
+  form{
+    text-align: center;
+    input[type=file]{
+      background: none;
+      border: none;
+      box-shadow: none;
+      font-size: 15px;
+      border: 2px solid red;
+    }
+  }
+
+  .docs{
+    min-width: 240px;
+  }
+}

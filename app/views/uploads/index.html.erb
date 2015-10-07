@@ -1,0 +1,16 @@
+<div class="devise_flexbox_container">
+  <div class="user_form">
+    <div class="row">
+      <h1>All Documents</h1>
+      <% @dashboard.uploads.each do |upload| %>
+
+      <div>
+        <p class="index_center"><%= link_to upload.name, upload.url%></p>
+      </div>
+
+      <% end %>
+      <%= link_to 'Back', dashboards_path %>
+    </div>
+  </div>
+
+</div>

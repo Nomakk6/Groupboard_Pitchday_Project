@@ -1,0 +1,60 @@
+<% @user = current_user %>
+
+<div class="dashboard_flexbox_container">
+  <div class="dash-flex-child">
+    <div id="title">
+      <h1 class="hello">Hello <%= @user.name %>!</h1>
+    </div>
+    <div id="dashboard_list">
+      <h3>Owned Dashboards</h3>
+      <% @dashboards.each do |dashboard| %>
+      <% if @user.id == dashboard.user_id %>
+
+
+
+      <div class="standard-button change-color radius">
+        <h2><%= link_to dashboard.title, dashboard %></h2>
+        <div id="dashboard_links">
+
+          <%= link_to 'Edit', edit_dashboard_path(dashboard) %>
+          |
+          <%= link_to 'Delete', dashboard, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+
+
+      </br>
+    </div>
+    <br>
+    <br>
+    <br>
+      <% end %>
+    <% end %>
+    <div id="dashboard_link_center">
+      <%= link_to 'New Dashboard', new_dashboard_path %>
+    </div>
+  </div>
+
+  <div id="dashboard_list">
+    <h3>Joined Dashboards</h3>
+    <% @dashboards.each do |dashboard| %>
+      <% dashboard.dashboard_memberships.each do |x| %>
+        <% if x.member_id == @user.id %>
+
+    <div class="standard-button change-color radius">
+      <h4><%= link_to dashboard.title, dashboard %></h4>
+    </div>
+        <% end %>
+    <% end %>
+  <% end %>
+</div>
+
+  <div id="dashboard_join">
+    <h3>Join a Dashboard</h3>
+    <%= form_tag(dashboards_search_path, id: "search-form") do %>
+    <%= text_field_tag :search, params[:g], placeholder: "Enter Dashboard Code" %>
+    <%= submit_tag "Search" %>
+    <% end %>
+  </div>
+</div>
+</div>
+<br>

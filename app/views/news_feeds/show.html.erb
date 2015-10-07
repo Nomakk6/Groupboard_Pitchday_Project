@@ -1,0 +1,16 @@
+<div class="form_flexbox_container">
+  <div class="show_form">
+<p id="notice"><%= notice %></p>
+
+
+<h3>Title: <%= @news_feed.title %></h3>
+
+<p><%= @news_feed.body %></p>
+
+<h5>Dashboard: <%= @news_feed.dashboard.title %></h5>
+
+
+<%= link_to 'Edit', edit_news_feed_path(@news_feed) %> |
+<%= link_to 'Back', dashboard_path(@news_feed.dashboard) %>
+</div>
+</div>

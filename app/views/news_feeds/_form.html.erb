@@ -1,0 +1,34 @@
+
+<%= form_for(@news_feed) do |f| %>
+  <% if @news_feed.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@news_feed.errors.count, "error") %> prohibited this announcement from being saved:</h2>
+
+      <ul>
+      <% @news_feed.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.text_field :title, placeholder: "Title" %>
+  </div>
+
+  <div class="field">
+    <br>
+    <%= f.text_area :body, class:"text_area_field", placeholder: "Body" %>
+  </div>
+
+  <%= f.hidden_field :dashboard_id, value: params[:dashboard_id] %>
+
+
+
+  <div class="actions">
+    <%= f.submit "Create Announcement" %>
+  </div>
+<% end %>
+</div>
+</div>
