@@ -1,2 +1,5 @@
 == README
 
+Wyncode Final Pitch Day Project with team members Mashon Thomas and Jeff Ginsberg.
+
+Groupboard.co : GroupBoard is a web application that helps school faculty and coaches communicate with their students. It was built in a short two weeks by my team as our final project at Wyncode. GroupBoard was selected the best application by a panel of judges at the Pitch Day event.
